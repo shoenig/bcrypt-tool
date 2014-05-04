@@ -7,7 +7,6 @@
 // matches a hash, and compute cost from a hash.
 package main
 
-
 import (
 	"fmt"
 	"os"
@@ -38,7 +37,7 @@ func main() {
 			help()
 		}
 		c := cost(os.Args[1])
-		fmt.Println(c)
+		fmt.Println(fmt.Sprintf("%d", c))
 	case "match":
 		if len(os.Args) != 3 {
 			help()
