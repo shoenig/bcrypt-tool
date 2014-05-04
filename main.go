@@ -1,4 +1,12 @@
+// Copyright 2014 Seth Hoenig. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+// bcrypt-tool is command line tool for common bcrypt functions
+// including the ability to generate hashes, determine if a password
+// matches a hash, and compute cost from a hash.
 package main
+
 
 import (
 	"fmt"
