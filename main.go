@@ -1,8 +1,4 @@
-// Copyright 2014 Seth Hoenig. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
-
-// bcrypt-tool is command line tool for common bcrypt functions
+// Command bcrypt-tool is command line tool for common bcrypt functions
 // including the ability to generate hashes, determine if a password
 // matches a hash, and compute cost from a hash.
 package main
@@ -70,7 +66,7 @@ func main() {
 }
 
 func help() {
-	fmt.Fprintln(os.Stderr, helpText)
+	_, _ = fmt.Fprintln(os.Stderr, helpText)
 	os.Exit(2)
 }
 
@@ -78,7 +74,7 @@ func cost(hash string) int {
 	h := []byte(hash)
 	c, e := bcrypt.Cost(h)
 	if e != nil {
-		fmt.Fprintln(os.Stderr, e)
+		_, _ = fmt.Fprintln(os.Stderr, e)
 		os.Exit(2)
 	}
 	return c
@@ -98,7 +94,7 @@ func hash(password string, cost int) string {
 	p := []byte(password)
 	h, e := bcrypt.GenerateFromPassword(p, cost)
 	if e != nil {
-		fmt.Fprintln(os.Stderr, e)
+		_, _ = fmt.Fprintln(os.Stderr, e)
 		os.Exit(2)
 	}
 	return string(h)
