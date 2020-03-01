@@ -9,13 +9,22 @@ bcrypt-tool
 [![NetflixOSS Lifecycle](https://img.shields.io/osslifecycle/shoenig/bcrypt-tool.svg)](OSSMETADATA)
 [![GitHub](https://img.shields.io/github/license/shoenig/bcrypt-tool.svg)](LICENSE)
 
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/bcrypt-tool)
+
 # Project Overview
 
 Module `gophers.dev/cmds/bcrypt-tool` provides a simple command line tool.
 
 # Getting Started
 
-The `bcrypt-tool` command can be installed by running
+#### Install from SnapCraft
+The `bcrypt-tool` command can be installed as a snap
+```bash
+$ sudo snap install bcrypt-tool
+```
+
+#### Build from source
+The `bcrypt-tool` command can be compiled by running
 ```bash
 $ go get gophers.dev/cmds/bcrypt-tool
 ```
