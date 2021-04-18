@@ -1,6 +1,6 @@
 name: bcrypt-tool
-base: core18
-version: 'v1.1.0'
+base: core20
+version: 'v1.1.1'
 summary: bcrypt-tool is a dandy CLI tool for generating and matching bcrypt hashes
 description: |
  bcrypt-tool is a dandy CLI tool for generating and matching bcrypt hashes
@@ -8,7 +8,7 @@ description: |
 grade: stable
 confinement: strict
 architectures:
-  - amd64
+  - build-on: amd64
 
 apps:
   bcrypt-tool:
@@ -17,8 +17,9 @@ apps:
 parts:
   bcrypt-tool:
     plugin: go
-    go-channel: 1.13/stable
-    source-tag: v1.1.0
-    go-packages: [github.com/shoenig/bcrypt-tool]
+    go-channel: 1.16/stable
+    source: https://github.com/shoenig/bcrypt-tool
+    source-type: git
+    source-tag: v1.1.1
     build-packages:
       - git
