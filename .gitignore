@@ -1,4 +1,6 @@
 *~
-bcrypt-tool
 **/*.snap
 
+bcrypt-tool
+output/
+dist/

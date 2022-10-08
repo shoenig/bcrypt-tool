@@ -3,17 +3,13 @@ bcrypt-tool
 
 `bcrypt-tool` is a dandy CLI tool for generating and matching bcrypt hashes
 
-[![Go Report Card](https://goreportcard.com/badge/gophers.dev/cmds/bcrypt-tool)](https://goreportcard.com/report/gophers.dev/cmds/bcrypt-tool)
-[![Build Status](https://travis-ci.com/shoenig/bcrypt-tool.svg?branch=master)](https://travis-ci.com/shoenig/bcrypt-tool)
-[![GoDoc](https://godoc.org/gophers.dev/cmds/bcrypt-tool?status.svg)](https://godoc.org/gophers.dev/cmds/bcrypt-tool)
-[![NetflixOSS Lifecycle](https://img.shields.io/osslifecycle/shoenig/bcrypt-tool.svg)](OSSMETADATA)
 [![GitHub](https://img.shields.io/github/license/shoenig/bcrypt-tool.svg)](LICENSE)
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/bcrypt-tool)
 
 # Project Overview
 
-Module `gophers.dev/cmds/bcrypt-tool` provides a simple command line tool.
+Module `github.com/shoenig/bcrypt-tool` provides a simple command line tool.
 
 # Getting Started
 
@@ -26,7 +22,7 @@ $ sudo snap install bcrypt-tool
 #### Build from source
 The `bcrypt-tool` command can be compiled by running
 ```bash
-$ go get gophers.dev/cmds/bcrypt-tool
+$ go get github.com/shoenig/bcrypt-tool
 ```
 
 ### Examples
@@ -70,9 +66,9 @@ bcrypt-tool [action] parameter ...
 
 # Contributing
 
-The `gophers.dev/cmds/bcrypt-tool` module is always improving with new features
+The `github.com/shoenig/bcrypt-tool` module is always improving with new features
 and error corrections. For contributing bug fixes and new features please file an issue.
 
 # License
 
-The `gophers.dev/cmds/bcrypt-tool` module is open source under the [MIT](LICENSE) license.
+The `github.com/shoenig/bcrypt-tool` module is open source under the [MIT](LICENSE) license.

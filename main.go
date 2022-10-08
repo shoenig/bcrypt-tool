@@ -17,8 +17,7 @@ const (
     hash  [password] <cost> Generate hash given password and optional cost (4-31)
     match [password] [hash] Print "yes" and return 0 if password is a match
                             for hash, or print "no" and return 1 otherwise 
-    cost  [hash]            Print the cost of hash (4-31)
-`
+    cost  [hash]            Print the cost of hash (4-31)`
 )
 
 func main() {

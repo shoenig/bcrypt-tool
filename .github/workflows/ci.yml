@@ -1,0 +1,17 @@
+name: run-ci
+on: [push]
+jobs:
+  run-tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v2
+        with:
+          stable: true
+          go-version: 1.18.7
+      - name: Vet
+        run: |
+          make vet
+      - name: Tests
+        run: |
+          make test
