@@ -5,10 +5,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-go@v2
+      - uses: hashicorp/setup-golang@v1
         with:
-          stable: true
-          go-version: 1.18.7
+          version-file: go.mod
       - name: Vet
         run: |
           make vet
