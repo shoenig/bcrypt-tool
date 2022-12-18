@@ -4,3 +4,4 @@
 bcrypt-tool
 output/
 dist/
+.DS_Store
