@@ -1,10 +1,12 @@
+NAME = bcrypt-tool
+
 .PHONY: build
 build: clean
-	CGO_ENABLED=0 go build -o output/bcrypt-tool
+	CGO_ENABLED=0 go build -o output/$(NAME)
 
 .PHONY: clean
 clean:
-	rm -f output/bcrypt-tool
+	rm -rf dist output/$(NAME)
 
 .PHONY: test
 test:
@@ -13,5 +15,10 @@ test:
 .PHONY: vet
 vet:
 	go vet ./...
+
+.PHONY: release
+release:
+	envy exec gh-release goreleaser release --clean
+	$(MAKE) clean
 
 default: build
