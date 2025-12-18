@@ -5,3 +5,6 @@ bcrypt-tool
 output/
 dist/
 .DS_Store
+
+# Personal preferences for users of the Nova code editor
+.nova
