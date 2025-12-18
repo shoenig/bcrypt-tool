@@ -1,3 +1,4 @@
+![bcrypt-tool logo](assets/bcrypt-tool-logo.jpeg)  
 bcrypt-tool
 ===========
 
@@ -45,12 +46,12 @@ $ go get github.com/shoenig/bcrypt-tool
 ```bash
 $ bcrypt-tool hash p4ssw0rd
 ```
-    
+
 #### Generate Hash from a Password with Cost
 ```bash
 $ bcrypt-tool hash p4ssw0rd 31
 ```
-    
+
 #### Determine if Password matches Hash
 ```bash
 $ bcrypt-tool match p4ssw0rd $2a$10$nWFwjoFo4zhyVosdYMb6XOxZqlVB9Bk0TzOvmuo16oIwMZJXkpanW
@@ -62,7 +63,7 @@ note: depending on your shell, you may need to escape the $ characters
 ```bash
 $ bcrypt-tool cost $2a$10$nWFwjoFo4zhyVosdYMb6XOxZqlVB9Bk0TzOvmuo16oIwMZJXkpanW
 ```
-    
+
 note: depending on your shell, you may need to escape the $ characters
 
 ### Usage
