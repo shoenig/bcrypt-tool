@@ -14,10 +14,10 @@ import (
 const (
 	helpText = `Usage: bcrypt-tool [action] argument ...
   ACTIONS
-    hash  [password] <cost> Generate hash given password and optional cost (4-31)
-    match [password] [hash] Print "yes" and return 0 if password is a match
-                            for hash, or print "no" and return 1 otherwise 
-    cost  [hash]            Print the cost of hash (4-31)`
+	hash  [password] <cost> Generate hash given password and optional cost (4-31)
+	match [password] [hash] Print "yes" and return 0 if password is a match
+                            for hash, or print "no" and return 1 otherwise
+	cost  [hash]            Print the cost of hash (4-31)`
 )
 
 func main() {
@@ -32,7 +32,7 @@ func main() {
 			help()
 		}
 		c := cost(os.Args[1])
-		fmt.Println(fmt.Sprintf("%d", c))
+		fmt.Printf("%d\n", c)
 	case "match":
 		if len(os.Args) != 3 {
 			help()
@@ -83,10 +83,7 @@ func match(password, hash string) bool {
 	p := []byte(password)
 	h := []byte(hash)
 	e := bcrypt.CompareHashAndPassword(h, p)
-	if e != nil {
-		return false
-	}
-	return true
+	return e == nil
 }
 
 func hash(password string, cost int) string {
