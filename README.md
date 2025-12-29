@@ -24,15 +24,6 @@ It is pre-compiled for many operating systems and architectures including
 - OpenBSD
 - Plan9
 
-#### Install from SnapCraft
-
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/bcrypt-tool)
-
-The `bcrypt-tool` command can be installed as a snap
-```bash
-$ sudo snap install bcrypt-tool
-```
-
 #### Build from source
 The `bcrypt-tool` command can be compiled by running
 ```bash
