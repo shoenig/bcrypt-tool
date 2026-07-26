@@ -32,7 +32,7 @@ func main() {
 			help()
 		}
 		c := cost(os.Args[1])
-		fmt.Println(fmt.Sprintf("%d", c))
+		fmt.Println(strconv.Itoa(c))
 	case "match":
 		if len(os.Args) != 3 {
 			help()
@@ -82,11 +82,7 @@ func cost(hash string) int {
 func match(password, hash string) bool {
 	p := []byte(password)
 	h := []byte(hash)
-	e := bcrypt.CompareHashAndPassword(h, p)
-	if e != nil {
-		return false
-	}
-	return true
+	return bcrypt.CompareHashAndPassword(h, p) == nil
 }
 
 func hash(password string, cost int) string {

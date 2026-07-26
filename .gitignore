@@ -1,7 +1,9 @@
 *~
 **/*.snap
 
-bcrypt-tool
 output/
 dist/
+.bin/
 .DS_Store
+go.work
+go.work.sum
