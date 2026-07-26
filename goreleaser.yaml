@@ -1,9 +1,13 @@
+version: 2
+
 before:
   hooks:
     - go mod tidy
+
 builds:
   - env:
       - CGO_ENABLED=0
+    binary: bcrypt-tool
     goos:
       - linux
       - darwin
@@ -11,10 +15,13 @@ builds:
       - freebsd
       - openbsd
       - plan9
+
 checksum:
   name_template: 'checksums.txt'
+
 snapshot:
-  name_template: "{{ incpatch .Version }}-next"
+  version_template: "{{ incpatch .Version }}-next"
+
 changelog:
   sort: asc
   filters:

@@ -1,0 +1,46 @@
+version: "2"
+linters:
+  enable:
+    - asasalint
+    - asciicheck
+    - bidichk
+    - bodyclose
+    - copyloopvar
+    - dogsled
+    - dupword
+    - durationcheck
+    - errname
+    - errorlint
+    - exhaustive
+    - gochecknoinits
+    - gocritic
+    - makezero
+    - misspell
+    - musttag
+    - nilnil
+    - noctx
+    - paralleltest
+    - perfsprint
+    - prealloc
+    - predeclared
+    - reassign
+    - revive
+    - rowserrcheck
+    - sqlclosecheck
+    - tagalign
+    - usetesting
+    - whitespace
+  settings:
+    exhaustive:
+      default-signifies-exhaustive: true
+    paralleltest:
+      ignore-missing-subtests: true
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+formatters:
+  enable:
+    - gofmt
+  exclusions:
+    generated: lax

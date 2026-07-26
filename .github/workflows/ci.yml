@@ -1,16 +1,27 @@
-name: run-ci
-on: [push]
+name: Run CI Tests
+on:
+  pull_request:
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+  push:
+    branches:
+      - 'main'
 jobs:
   run-tests:
-    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: hashicorp/setup-golang@v3
+      - uses: actions/checkout@v7
+      - uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3
+      - uses: actions/setup-go@v6
         with:
-          version-file: go.mod
-      - name: Vet
+          cache: true
+          go-version-file: go.mod
+      - name: Show System
         run: |
-          make vet
-      - name: Tests
+          uname -a
+          just sysinfo
+      - name: Run Go Test
         run: |
-          make test
+          just init tidy vet tests

@@ -27,7 +27,15 @@ It is pre-compiled for many operating systems and architectures including
 #### Build from source
 The `bcrypt-tool` command can be compiled by running
 ```bash
-$ go get github.com/shoenig/bcrypt-tool
+$ go install github.com/shoenig/bcrypt-tool@latest
+```
+
+The project uses a [Justfile](Justfile) for common development tasks:
+```bash
+$ just init    # install build dependencies (golangci-lint)
+$ just vet     # run go vet
+$ just tests   # run go tests
+$ just lint    # run golangci-lint
 ```
 
 ### Examples
